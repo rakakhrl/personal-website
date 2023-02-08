@@ -32,7 +32,7 @@ function App() {
       <Container h="100vh" w="100vw" p={40} style={{ boxSizing: "border-box" }}>
         <Stack w="100%" h="100%">
           <Image
-            src="../public/icon.svg"
+            src="./assets/icon.svg"
             height={30}
             width={30}
             fit="contain"
