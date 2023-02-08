@@ -79,7 +79,7 @@ function App() {
         <Space h={42} />
         <Text size={24}>Raka Khairil Azhar</Text>
         <Text size="sm" color={theme.colors.silver[0]} mt={-20}>
-          Currently work as
+          Currently working as
         </Text>
         <Text size={24} mt={-20}>
           Technical Assistance Manager
