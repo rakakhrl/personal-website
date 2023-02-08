@@ -119,7 +119,7 @@ function App() {
             })}
           >
             <Center h="100%" w="100%">
-              <Text size="sm" color={theme.colors.platinum[0]}>
+              <Text size="sm" color={theme.colors.silver[0]} align="center">
                 I don't know what to put down here so please enjoy this black
                 box.
               </Text>
