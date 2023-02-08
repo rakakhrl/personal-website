@@ -1,34 +1,27 @@
 {
   "name": "personal-website",
-  "version": "1.0.0",
   "private": true,
-  "description": "Personal Website",
-  "author": "rakakhrl",
-  "keywords": [
-    "gatsby"
-  ],
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22",
-    "babel-plugin-styled-components": "^1.13.3",
-    "gatsby": "^4.0.0",
-    "gatsby-plugin-image": "^2.0.0",
-    "gatsby-plugin-mdx": "^3.0.0",
-    "gatsby-plugin-react-helmet": "^5.0.0",
-    "gatsby-plugin-sharp": "^4.0.0",
-    "gatsby-plugin-styled-components": "^5.0.0",
-    "gatsby-source-filesystem": "^4.0.0",
-    "gatsby-transformer-sharp": "^4.0.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-helmet": "^6.1.0",
-    "styled-components": "^5.3.3"
+    "@emotion/react": "^11.10.5",
+    "@mantine/core": "^5.10.3",
+    "@mantine/hooks": "^5.10.3",
+    "@tabler/icons-react": "^2.2.0",
+    "atropos": "^1.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.1.0"
   }
 }
