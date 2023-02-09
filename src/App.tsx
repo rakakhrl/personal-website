@@ -12,7 +12,7 @@ import {
   Box,
   Center,
 } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+import { useHover, useMediaQuery } from "@mantine/hooks";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
@@ -27,6 +27,8 @@ function App() {
   const tablet = useMediaQuery("(min-width: 481px) and (max-width: 1024px)");
   const laptop = useMediaQuery("(min-width: 1025px) and (max-width: 1280px)");
   const desktop = useMediaQuery("(min-width:1281px)");
+  const { hovered: hoveredDev, ref: refDev } = useHover();
+  const { hovered: hoveredHus, ref: refHus } = useHover();
 
   if (phone || tablet) {
     return (
@@ -156,9 +158,17 @@ function App() {
           h="calc(100% - 80px)"
           pl={80}
           pt={40}
+          align="start"
         >
           <Tooltip.Floating label="Work in progress !" color="yellow">
-            <Title color={theme.colors.smokyBlack[0]}>
+            <Title
+              color={
+                hoveredDev
+                  ? theme.fn.lighten(theme.colors.smokyBlack[0], 0.6)
+                  : theme.colors.smokyBlack[0]
+              }
+              ref={refDev}
+            >
               <Text component="a" href="/projects" td="underline" inherit>
                 developer
               </Text>
@@ -168,7 +178,14 @@ function App() {
             </Title>
           </Tooltip.Floating>
           <Tooltip.Floating label="Work in progress !" color="yellow">
-            <Title color={theme.colors.smokyBlack[0]}>
+            <Title
+              color={
+                hoveredHus
+                  ? theme.fn.lighten(theme.colors.smokyBlack[0], 0.6)
+                  : theme.colors.smokyBlack[0]
+              }
+              ref={refHus}
+            >
               <Text component="a" href="/blog" td="underline" inherit>
                 husband
               </Text>
