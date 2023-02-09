@@ -144,7 +144,8 @@ function App() {
       <Group
         h="100vh"
         w="100vw"
-        p={desktop ? 100 : 80}
+        px={desktop ? 160 : 80}
+        py={80}
         align="center"
         styles={{
           backgroundColor: theme.colors.platinum,
