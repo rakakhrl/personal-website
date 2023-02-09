@@ -237,6 +237,7 @@ function App() {
             width={600}
             fit="contain"
             alt="Avatar provided by Open Peeps by Pablo Stanley"
+            onClick={() => window.open("https://www.openpeeps.com/", "_blank")}
           />
         </Tooltip.Floating>
       </Group>
