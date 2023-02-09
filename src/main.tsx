@@ -4,6 +4,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import "./index.css";
 import "atropos/css";
+import { ModalsProvider } from "@mantine/modals";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -16,9 +17,22 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
           silver: ["#B7B5B3"],
           smokyBlack: ["#141301"],
         },
+        components: {
+          Input: {
+            styles: (theme) => ({
+              input: {
+                "&:focus-within": {
+                  borderColor: theme.colors.smokyBlack[0],
+                },
+              },
+            }),
+          },
+        },
       }}
     >
-      <App />
+      <ModalsProvider>
+        <App />
+      </ModalsProvider>
     </MantineProvider>
   </React.StrictMode>
 );
