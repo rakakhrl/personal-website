@@ -6,6 +6,24 @@ import "./index.css";
 import "atropos/css";
 import { ModalsProvider } from "@mantine/modals";
 import { NotificationsProvider } from "@mantine/notifications";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Blog from "./Blog";
+import BlogPost from "./BlogPost";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
+  },
+  {
+    path: "/blog/:id",
+    element: <BlogPost />,
+  },
+]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
@@ -33,7 +51,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     >
       <ModalsProvider>
         <NotificationsProvider position="top-center">
-          <App />
+          <RouterProvider router={router} />
         </NotificationsProvider>
       </ModalsProvider>
     </MantineProvider>

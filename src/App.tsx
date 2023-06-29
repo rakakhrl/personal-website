@@ -27,8 +27,10 @@ import avatar from "./assets/avatar.svg";
 import icon from "./assets/icon.svg";
 import { useForm } from "@mantine/form";
 import { showNotification } from "@mantine/notifications";
+import { useNavigate } from "react-router-dom";
 
 function App() {
+  const navigate = useNavigate();
   const theme = useMantineTheme();
   const phone = useMediaQuery("(min-width: 320px) and (max-width: 480px)");
   const tablet = useMediaQuery("(min-width: 481px) and (max-width: 1024px)");
@@ -99,7 +101,17 @@ function App() {
           <Space h={24} />
           <Tooltip.Floating label="Work in progress !" color="yellow">
             <Title color={theme.colors.smokyBlack[0]}>
-              <Text component="a" href="/projects" td="underline" inherit>
+              <Text
+                component="button"
+                // onClick={() => navigate("/projects")}
+                td="underline"
+                inherit
+                style={{
+                  padding: 0,
+                  backgroundColor: "transparent",
+                  border: "none",
+                }}
+              >
                 developer
               </Text>
               <Text span inherit color={theme.colors.silver[0]}>
@@ -107,16 +119,26 @@ function App() {
               </Text>
             </Title>
           </Tooltip.Floating>
-          <Tooltip.Floating label="Work in progress !" color="yellow">
-            <Title color={theme.colors.smokyBlack[0]}>
-              <Text component="a" href="/blog" td="underline" inherit>
-                husband
-              </Text>
-              <Text span inherit color={theme.colors.silver[0]}>
-                .
-              </Text>
-            </Title>
-          </Tooltip.Floating>
+          {/* <Tooltip.Floating label="read my blog" color="dark"> */}
+          <Title color={theme.colors.smokyBlack[0]}>
+            <Text
+              // component="button"
+              // onClick={() => navigate("/blog")}
+              // td="underline"
+              inherit
+              style={{
+                padding: 0,
+                backgroundColor: "transparent",
+                border: "none",
+              }}
+            >
+              husband
+            </Text>
+            <Text span inherit color={theme.colors.silver[0]}>
+              .
+            </Text>
+          </Title>
+          {/* </Tooltip.Floating> */}
           <Tooltip.Floating label="Soon !" color="green">
             <Title color={theme.colors.smokyBlack[0]}>
               <Text
@@ -224,7 +246,17 @@ function App() {
               }
               ref={refDev}
             >
-              <Text component="a" href="/projects" td="underline" inherit>
+              <Text
+                component="button"
+                onClick={() => navigate("/projects")}
+                td="underline"
+                inherit
+                style={{
+                  padding: 0,
+                  backgroundColor: "transparent",
+                  border: "none",
+                }}
+              >
                 developer
               </Text>
               <Text span inherit color={theme.colors.silver[0]}>
@@ -232,7 +264,7 @@ function App() {
               </Text>
             </Title>
           </Tooltip.Floating>
-          <Tooltip.Floating label="Work in progress !" color="yellow">
+          <Tooltip.Floating label="Read my blog" color="dark">
             <Title
               color={
                 hoveredHus
@@ -241,7 +273,17 @@ function App() {
               }
               ref={refHus}
             >
-              <Text component="a" href="/blog" td="underline" inherit>
+              <Text
+                component="button"
+                onClick={() => navigate("/blog")}
+                td="underline"
+                inherit
+                style={{
+                  padding: 0,
+                  backgroundColor: "transparent",
+                  border: "none",
+                }}
+              >
                 husband
               </Text>
               <Text span inherit color={theme.colors.silver[0]}>
