@@ -248,7 +248,7 @@ function App() {
             >
               <Text
                 component="button"
-                onClick={() => navigate("/projects")}
+                // onClick={() => navigate("/projects")}
                 td="underline"
                 inherit
                 style={{
@@ -264,33 +264,33 @@ function App() {
               </Text>
             </Title>
           </Tooltip.Floating>
-          <Tooltip.Floating label="Read my blog" color="dark">
-            <Title
-              color={
-                hoveredHus
-                  ? theme.fn.lighten(theme.colors.smokyBlack[0], 0.6)
-                  : theme.colors.smokyBlack[0]
-              }
-              ref={refHus}
+          {/* <Tooltip.Floating label="Read my blog" color="dark"> */}
+          <Title
+            color={
+              hoveredHus
+                ? theme.fn.lighten(theme.colors.smokyBlack[0], 0.6)
+                : theme.colors.smokyBlack[0]
+            }
+            ref={refHus}
+          >
+            <Text
+              // component="button"
+              // onClick={() => navigate("/blog")}
+              // td="underline"
+              inherit
+              style={{
+                padding: 0,
+                backgroundColor: "transparent",
+                border: "none",
+              }}
             >
-              <Text
-                component="button"
-                onClick={() => navigate("/blog")}
-                td="underline"
-                inherit
-                style={{
-                  padding: 0,
-                  backgroundColor: "transparent",
-                  border: "none",
-                }}
-              >
-                husband
-              </Text>
-              <Text span inherit color={theme.colors.silver[0]}>
-                .
-              </Text>
-            </Title>
-          </Tooltip.Floating>
+              husband
+            </Text>
+            <Text span inherit color={theme.colors.silver[0]}>
+              .
+            </Text>
+          </Title>
+          {/* </Tooltip.Floating> */}
           <Tooltip.Floating label="Soon !" color="green">
             <Title color={theme.colors.smokyBlack[0]}>
               <Text
